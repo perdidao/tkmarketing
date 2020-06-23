@@ -1,2 +1,47 @@
 .header {
+  border-bottom: 5px solid $ghost;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    display: block;
+    height: res(80);
+    margin-right: res(30);
+    transition: $default-transition;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    img {
+      display: block;
+      max-height: 100%;
+    }
+  }
+
+  &__description {
+    max-width: res(170);
+    position: relative;
+    font-size: res(14);
+    line-height: 1.4;
+  }
+
+  &__highlight {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: $primary;
+    font-family: $Klarna;
+    font-weight: $bold;
+    transform: rotate(-5deg);
+  }
 }

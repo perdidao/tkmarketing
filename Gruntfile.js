@@ -20,7 +20,7 @@ module.exports = function(grunt){
         options: { livereload: true }
       },
       static:{
-        files:[ 'index.html' ],
+        files:[ '**/*.php' ],
         options: { livereload: true }
       }
     },
@@ -150,6 +150,12 @@ module.exports = function(grunt){
             cwd: 'source/fonts/',
             src: '**/*',
             dest: 'static/fonts/'
+          },
+          {
+            expand: true,
+            cwd: 'source/images/',
+            src: '**/*',
+            dest: 'static/images/'
           }
         ]
       },
@@ -166,6 +172,12 @@ module.exports = function(grunt){
             cwd: 'source/fonts/',
             src: '**/*',
             dest: 'dist/static/fonts/'
+          },
+          {
+            expand: true,
+            cwd: 'source/images/',
+            src: '**/*',
+            dest: 'dist/static/images/'
           },
           {
             expand: true,
@@ -209,8 +221,8 @@ module.exports = function(grunt){
   grunt.task.run('notify_hooks');
 
   // Tasks
-  grunt.registerTask('dev', ['clean:dev','copy:dev','cwebp:dev','sass:dev','postcss:dev','uglify:dev', 'concat','connect','watch']);
-  grunt.registerTask('build', ['clean:dev','copy:dev','cwebp:dev','sass:dev','postcss:dev','uglify:dev', 'concat']);
-  grunt.registerTask('deploy', ['clean:dist','copy:dist','cwebp:dist','sass:dist','postcss:dist','uglify:dist', 'concat']);
+  grunt.registerTask('dev', ['clean:dev','copy:dev','sass:dev','postcss:dev','uglify:dev', 'concat','connect','watch']);
+  grunt.registerTask('build', ['clean:dev','copy:dev','sass:dev','postcss:dev','uglify:dev', 'concat']);
+  grunt.registerTask('deploy', ['clean:dist','copy:dist','sass:dist','postcss:dist','uglify:dist', 'concat']);
 
 };

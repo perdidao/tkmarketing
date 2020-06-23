@@ -1,17 +1,35 @@
 // Colors
-$black: #000;
-$gray: #555;
-$silver: #eee;
+$black: #3b3b3b;
+$gray: #707070;
+$silver: #f5f5f5;
 $white: #fff;
+$overcoat: rgba(0, 0, 0, 0.15);
+
+$deepsea: #616587;
+$blue: #1f72de;
+$sky: #81a6d7;
+$lavender: #afc8ea;
+$ghost: #f0f7ff;
+
+$red: #f36b7f;
+
+$facebook: #3b5998;
+$instagram: #e1306c;
+$linkedin: #0577b5;
+
+$primary: $blue;
 
 // Helpers
 $default-transition: all 300ms ease-in-out;
 
 // Fonts
-$default-font: Helvetica, Arial, sans-serif;
+$Klarna: 'Klarna Headline', Arial, Helvetica, sans-serif;
+$Avenir: 'Avenir', Arial, Helvetica, sans-serif;
+$default-font: $Avenir;
 
-$regular: 400;
-$bold: 700;
+$light: 300;
+$regular: 500;
+$bold: bold;
 
 // Screen sizes
 $size-notebook: 1440px;

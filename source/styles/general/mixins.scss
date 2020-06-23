@@ -55,7 +55,7 @@
   @if $base == "notebook" {
     $base: 1440;
   } @else if $base == "mobile" {
-    $base: 320;
+    $base: 420;
   } @else {
     $base: 1920;
   }

@@ -1,0 +1,57 @@
+.menu {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  &-item {
+    a {
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: res(120);
+      padding: res(10) res(20);
+      border-bottom: 5px solid transparent;
+      font-family: $Klarna;
+      font-weight: $light;
+      font-size: res(18);
+      transition: $default-transition;
+
+      &:hover {
+        color: $primary;
+        border-bottom: 5px solid $primary;
+      }
+    }
+
+    &-953 {
+      position: relative;
+
+      &:before{
+        content: ' ';
+        display: block;
+        width:res(30);
+        height: res(30);
+        background: url(../images/ico-rocket.svg) no-repeat center center;
+        position: absolute;
+        top:40%;
+        right:res(15);
+        z-index: 1;
+      }
+
+      a {
+        color: $black;
+        font-weight: $bold;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &.current-menu-item {
+      a {
+        font-weight: $bold;
+        color: $primary;
+        border-bottom: 5px solid $primary;
+      }
+    }
+  }
+}

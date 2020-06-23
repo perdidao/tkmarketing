@@ -5,9 +5,9 @@
 
 body {
   background-color: $white;
-  color: $black;
+  color: $gray;
   font-family: $default-font;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 16px;
 
   @media all and (max-width: $size-notebook) {
@@ -24,18 +24,8 @@ a {
   text-decoration: none;
 }
 
-.hello {
-  font-size: res(20);
-
-  @media (max-width: $size-notebook) {
-    font-size: res(20, notebook);
-  }
-
-  @media (max-width: $size-mobile) {
-    font-size: res(20, mobile);
-  }
-}
-
-.base {
-  font-size: 20px;
+.container {
+  width: 90vw;
+  max-width: 1420px;
+  margin: 0 auto;
 }
