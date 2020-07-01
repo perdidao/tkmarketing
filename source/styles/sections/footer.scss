@@ -1,0 +1,98 @@
+.footer {
+  background-color: $deepsea;
+  color: $ghost;
+  padding: res(40) 0;
+  @include font-smoothing(on);
+  position: relative;
+
+  &:before{
+    content: ' ';
+    display: block;
+    width:res(254);
+    height:res(184);
+    background:url(../images/footer-illustration.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    left:res(-16);
+    bottom: res(-10);
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__inst {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    margin-right: res(20);
+
+    img {
+      display: block;
+      max-width: res(80);
+    }
+  }
+
+  &__contacts {
+    max-width: res(275);
+  }
+
+  &__text {
+    font-size: res(14);
+    line-height: 2.5;
+  }
+
+  &__small {
+    font-size: res(11);
+  }
+
+  &__navs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &__nav {
+    margin-right: res(80);
+  }
+
+  &__title {
+    font-size: res(20);
+    font-family: $Klarna;
+    margin-bottom: res(25);
+  }
+
+  &__list {
+    li {
+      font-size: res(14);
+      line-height: 2.5;
+
+      a {
+        transition: $default-transition;
+        &:hover {
+          color: $sky;
+        }
+      }
+    }
+  }
+
+  &__partners {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &-wrapper {
+      max-width: res(320);
+    }
+  }
+
+  &__partner {
+    margin: 0 res(20) res(10) 0;
+  }
+}

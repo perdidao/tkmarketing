@@ -40,14 +40,14 @@
   add_filter('script_loader_tag', 'tk_defer_scripts', 10, 3);
 
   // Removendo width e height do thumbnail
-  add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
-  function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
-      $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-      return $html;
+  function tk_remove_thumbnail_size($html, $post_id, $post_image_id) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
   }
+  add_filter('post_thumbnail_html', 'tk_remove_thumbnail_size', 10, 3);
 
 	// Oculta a Admin Bar
-	add_filter('show_admin_bar', '__return_false');
+  add_filter('show_admin_bar', '__return_false');
 
 	// Importa as customizações
 	require get_template_directory() . '/includes/customizer.php';
@@ -58,5 +58,12 @@
     'method_nav'  => __('Menu do Método TK (rodapé)'),
     'content_nav'  => __('Menu de conteúdos (rodapé)'),
   ]);
+
+  // Diminui o tamanho dos resumos do post
+  function tk_custom_excerpt_length($length){
+    return 30;
+  }
+  add_filter('excerpt_length', 'tk_custom_excerpt_length');
+
 
 ?>

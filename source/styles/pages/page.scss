@@ -1,0 +1,41 @@
+.page {
+  &-header {
+    width: 100%;
+    background-image: $gradient;
+    margin-bottom: res(60);
+    padding: res(80) 0 res(20);
+    position: relative;
+
+    &__title {
+      display: inline-block;
+      color: $deepsea;
+      font-size: res(36);
+      position: relative;
+      z-index: 2;
+
+      &:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: res(10);
+        background-color: $blue;
+        position: absolute;
+        bottom: res(-30);
+        left: 0;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.1;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: res(100);
+
+  .page {
+    &-numbers {
+      display: block;
+      width: res(30);
+      height: res(30);
+      background-color: $sky;
+      color: $ghost;
+      text-align: center;
+      line-height: res(30);
+      transition: $default-transition;
+      margin: 0 res(5);
+
+      &:hover {
+        background-color: $blue;
+      }
+
+      &.current {
+        background-color: $deepsea;
+      }
+
+      &.prev,
+      &.next {
+        width: auto;
+        padding: 0 res(10);
+        background-color: $lavender;
+
+        &:hover {
+          background-color: $sky;
+        }
+      }
+
+      &.dots {
+        background-color: transparent;
+        color: $deepsea;
+      }
+    }
+  }
+}

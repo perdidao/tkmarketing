@@ -13,6 +13,19 @@
 
 	add_action('customize_register', 'add_telefone');
 
+	// ****** Whatsapp
+	function add_whats( $wp_customize ) {
+    $wp_customize->add_setting('whats');
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'whats', [
+      'label'    => __( 'Whatsapp', 'whats' ),
+      'section'  => 'title_tagline',
+      'settings' => 'whats',
+    ]));
+	}
+
+	add_action('customize_register', 'add_whats');
+
 	// ****** E-mail
 	function add_email( $wp_customize ) {
     $wp_customize->add_setting('email');

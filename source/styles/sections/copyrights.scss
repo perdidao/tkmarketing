@@ -1,0 +1,13 @@
+.copyrights {
+  padding: res(20) 0;
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text{
+    font-size: res(14);
+  }
+}
