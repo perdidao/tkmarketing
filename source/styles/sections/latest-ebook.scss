@@ -1,0 +1,70 @@
+.latest-ebook {
+  border: 2px solid $silver;
+
+  &__image {
+    background-color: $silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: res(30) res(40);
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    padding: res(20);
+  }
+
+  &__title {
+    font-size: res(18);
+    line-height: res(22);
+    font-family: $Klarna;
+    color: $black;
+    font-weight: $bold;
+    margin-bottom: res(10);
+  }
+
+  &__description {
+    line-height: 1.5;
+    margin-bottom: res(10);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__download {
+    display: block;
+    padding: res(10) res(30);
+    font-family: $Klarna;
+    font-weight: $bold;
+    text-transform: uppercase;
+    @include font-smoothing(on);
+    letter-spacing: 0.1em;
+    background-color: $blue;
+    color: $ghost;
+    transition: $default-transition;
+
+    &:hover{
+      background-color: $black;
+    }
+  }
+
+  &__more {
+    display: block;
+    font-family: $Klarna;
+    font-weight: $bold;
+    @include font-smoothing(on);
+    color: $blue;
+    transition: $default-transition;
+
+    &:hover{
+      background-color: $black;
+    }
+  }
+}
