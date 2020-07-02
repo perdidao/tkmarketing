@@ -65,5 +65,14 @@
   }
   add_filter('excerpt_length', 'tk_custom_excerpt_length');
 
+  // Filtrando pesquisa por tipo de post
+  function tk_search_filter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+  }
+  add_filter('pre_get_posts','tk_search_filter');
+
 
 ?>

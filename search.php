@@ -6,7 +6,7 @@
 <section class="page-header">
   <div class="container">
     <h1 class="page-header__title">
-      Artigos
+      Resultados para <strong class="page-header__query"><?php echo $_GET['s'] ?></strong>
     </h1>
   </div>
 </section>
@@ -52,7 +52,7 @@
 
     <?php
       else:
-        echo '<p class="posts__blank">Nenhum post encontrado</p>';
+        echo '<p class="posts__blank">Nenhum resultado para ' . $_GET["s"] .'</p>';
       endif;
     ?>
   </section>

@@ -25,6 +25,10 @@
       }
     }
 
+    &__query {
+      color: $blue;
+    }
+
     &__image {
       position: absolute;
       z-index: 1;

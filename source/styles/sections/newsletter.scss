@@ -1,0 +1,49 @@
+.newsletter {
+  width: 100%;
+  padding: res(20);
+  background: $beige url(../images/newsletter-background.png) no-repeat bottom
+    right;
+  background-size: 60%;
+
+  &__title {
+    font-family: $Klarna;
+    font-size: res(18);
+    color: $red;
+    margin-bottom: res(20);
+    @include font-smoothing(on);
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $black;
+    height: res(40);
+    padding: 0 res(10);
+    margin-bottom: res(20);
+    font-family: $Avenir;
+    font-size: res(18);
+    color: $black;
+  }
+
+  &__button {
+    display: inline-block;
+    height: res(40);
+    padding: 0 res(30);
+    border: 0;
+    background: $red;
+    font-family: $Klarna;
+    font-weight: $bold;
+    font-size: res(14);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $beige;
+    transition: $default-transition;
+    cursor: pointer;
+    @include font-smoothing(on);
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
