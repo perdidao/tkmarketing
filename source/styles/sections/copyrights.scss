@@ -1,13 +1,34 @@
 .copyrights {
   padding: res(20) 0;
 
-  &__container{
+  @media (max-width: $size-notebook) {
+    padding: res(20, notebook) 0;
+  }
+
+  @media (max-width: $size-mobile) {
+    padding: res(20, mobile) 0;
+  }
+
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+    }
   }
 
-  &__text{
+  &__text {
     font-size: res(14);
+
+    @media (max-width: $size-notebook) {
+      font-size: res(14, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(14, mobile);
+      margin-bottom: res(20, mobile);
+    }
   }
 }

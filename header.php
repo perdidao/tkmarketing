@@ -64,6 +64,8 @@
         ?>
       </ul>
 
+      <a href="javascript:;" title="" class="header__toggle"></a>
+
     </div>
 
   </header>

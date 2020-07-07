@@ -1,8 +1,26 @@
-.header{
+.header {
   .menu {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+
+    @media (max-width: $size-mobile) {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+
+      &.active {
+        display: flex;
+      }
+    }
 
     &-item {
       a {
@@ -18,6 +36,18 @@
         font-size: res(18);
         transition: $default-transition;
 
+        @media (max-width: $size-notebook) {
+          height: res(120, notebook);
+          padding: res(10, notebook) res(20, notebook);
+          font-size: res(18, notebook);
+        }
+
+        @media (max-width: $size-mobile) {
+          height: auto;
+          padding: res(15, mobile) res(20, mobile);
+          font-size: res(18, mobile);
+        }
+
         &:hover {
           color: $primary;
           border-bottom: 5px solid $primary;
@@ -27,16 +57,28 @@
       &-953 {
         position: relative;
 
-        &:before{
-          content: ' ';
+        &:before {
+          content: " ";
           display: block;
-          width:res(30);
+          width: res(30);
           height: res(30);
           background: url(../images/ico-rocket.svg) no-repeat center center;
           position: absolute;
-          top:40%;
-          right:res(15);
+          top: 40%;
+          right: res(15);
           z-index: 1;
+
+          @media (max-width: $size-notebook) {
+            width: res(30, notebook);
+            height: res(30, notebook);
+            right: res(15, notebook);
+          }
+
+          @media (max-width: $size-mobile) {
+            width: res(30, mobile);
+            height: res(30, mobile);
+            right: res(15, mobile);
+          }
         }
 
         a {

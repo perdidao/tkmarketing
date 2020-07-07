@@ -8,6 +8,14 @@
     justify-content: center;
     padding: res(30) res(40);
 
+    @media (max-width: $size-notebook) {
+      padding: res(30, notebook) res(40, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: res(30, mobile) res(40, mobile);
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -16,6 +24,14 @@
 
   &__info {
     padding: res(20);
+
+    @media (max-width: $size-notebook) {
+      padding: res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: res(20, mobile);
+    }
   }
 
   &__title {
@@ -25,11 +41,31 @@
     color: $black;
     font-weight: $bold;
     margin-bottom: res(10);
+
+    @media (max-width: $size-notebook) {
+      font-size: res(18, notebook);
+      line-height: res(22, notebook);
+      margin-bottom: res(10, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(18, mobile);
+      line-height: res(22, mobile);
+      margin-bottom: res(10, mobile);
+    }
   }
 
   &__description {
     line-height: 1.5;
     margin-bottom: res(10);
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(10, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      margin-bottom: res(10, mobile);
+    }
   }
 
   &__actions {
@@ -50,7 +86,15 @@
     color: $ghost;
     transition: $default-transition;
 
-    &:hover{
+    @media (max-width: $size-notebook) {
+      padding: res(10, notebook) res(30, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: res(10, mobile) res(30, mobile);
+    }
+
+    &:hover {
       background-color: $black;
     }
   }
@@ -63,7 +107,7 @@
     color: $blue;
     transition: $default-transition;
 
-    &:hover{
+    &:hover {
       background-color: $black;
     }
   }

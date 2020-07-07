@@ -6,12 +6,32 @@
     right;
   background-size: 60%;
 
+  @media (max-width: $size-notebook) {
+    padding: res(20, notebook);
+    margin-bottom: res(20, notebook);
+  }
+
+  @media (max-width: $size-mobile) {
+    padding: res(20, mobile);
+    margin-bottom: res(20, mobile);
+  }
+
   &__title {
     font-family: $Klarna;
     font-size: res(18);
     color: $red;
     margin-bottom: res(20);
     @include font-smoothing(on);
+
+    @media (max-width: $size-notebook) {
+      font-size: res(18, notebook);
+      margin-bottom: res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(18, mobile);
+      margin-bottom: res(20, mobile);
+    }
   }
 
   &__input {
@@ -25,6 +45,20 @@
     font-family: $Avenir;
     font-size: res(18);
     color: $black;
+
+    @media (max-width: $size-notebook) {
+      height: res(40, notebook);
+      padding: 0 res(10, notebook);
+      margin-bottom: res(20, notebook);
+      font-size: res(18, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(40, mobile);
+      padding: 0 res(10, mobile);
+      margin-bottom: res(20, mobile);
+      font-size: res(18, mobile);
+    }
   }
 
   &__button {
@@ -42,6 +76,18 @@
     transition: $default-transition;
     cursor: pointer;
     @include font-smoothing(on);
+
+    @media (max-width: $size-notebook) {
+      height: res(40, notebook);
+      padding: 0 res(30, notebook);
+      font-size: res(14, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(40, mobile);
+      padding: 0 res(30, mobile);
+      font-size: res(14, mobile);
+    }
 
     &:hover {
       background-color: $black;

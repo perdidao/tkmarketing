@@ -3,6 +3,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__item {
@@ -12,10 +16,27 @@
     padding-bottom: res(30);
     border-bottom: 1px solid $lavender;
     margin-bottom: res(30);
+
+    @media (max-width: $size-notebook) {
+      padding-bottom: res(30, notebook);
+      margin-bottom: res(30, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      display: block;
+      width: 100%;
+      padding-bottom: res(30, mobile);
+      margin-bottom: res(30, mobile);
+    }
   }
 
   &__thumb {
     width: 50%;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin-bottom: res(20, mobile);
+    }
 
     img {
       display: block;
@@ -25,12 +46,24 @@
 
   &__info {
     width: 46%;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+    }
   }
 
   &__title {
     font-family: $Klarna;
     color: $black;
     margin-bottom: res(20);
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      margin-bottom: res(20, mobile);
+    }
   }
 
   &__excerpt {
@@ -38,6 +71,16 @@
       font-size: res(16);
       line-height: 1.5;
       margin-bottom: res(20);
+
+      @media (max-width: $size-notebook) {
+        font-size: res(16, notebook);
+        margin-bottom: res(20, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(16, mobile);
+        margin-bottom: res(20, mobile);
+      }
     }
   }
 
@@ -48,6 +91,16 @@
     border: 1px solid $sky;
     border-radius: res(5);
     transition: $default-transition;
+
+    @media (max-width: $size-notebook) {
+      padding: res(10, notebook) res(30, notebook);
+      border-radius: res(5, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: res(10, mobile) res(30, mobile);
+      border-radius: res(5, mobile);
+    }
 
     &:hover {
       background-color: $sky;

@@ -1,5 +1,10 @@
 .header {
   border-bottom: 5px solid $ghost;
+
+  @media (max-width: $size-mobile) {
+    padding: res(20, mobile);
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -10,6 +15,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 
   &__logo {
@@ -17,6 +28,16 @@
     height: res(80);
     margin-right: res(30);
     transition: $default-transition;
+
+    @media (max-width: $size-notebook) {
+      height: res(80, notebook);
+      margin-right: res(30, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(60, mobile);
+      margin-right: res(30, mobile);
+    }
 
     &:hover {
       opacity: 0.6;
@@ -33,6 +54,17 @@
     position: relative;
     font-size: res(14);
     line-height: 1.4;
+
+    @media (max-width: $size-notebook) {
+      max-width: res(170, notebook);
+      font-size: res(14, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      max-width: res(170, mobile);
+      margin-right: res(40, mobile);
+      font-size: res(14, mobile);
+    }
   }
 
   &__highlight {
@@ -43,5 +75,53 @@
     font-family: $Klarna;
     font-weight: $bold;
     transform: rotate(-5deg);
+  }
+
+  &__toggle {
+    display: none;
+    width: res(40, mobile);
+    height: res(40, mobile);
+    background-color: $primary;
+    position: fixed;
+    z-index: 11;
+    top: 2vh;
+    right: 2vh;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: block;
+      width: 60%;
+      height: res(3, mobile);
+      background-color: $white;
+      position: absolute;
+      left: 20%;
+      transition: $default-transition;
+    }
+
+    &:before {
+      top: 35%;
+      width: 50%;
+    }
+
+    &:after {
+      bottom: 35%;
+    }
+
+    &.active {
+      &:before {
+        top: 45%;
+        width: 60%;
+        transform: rotate(-45deg);
+      }
+      &:after {
+        bottom: 45%;
+        transform: rotate(45deg);
+      }
+    }
+
+    @media (max-width: $size-mobile) {
+      display: block;
+    }
   }
 }

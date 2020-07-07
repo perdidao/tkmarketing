@@ -30,10 +30,19 @@ a {
   margin: 0 auto;
 }
 
-.content{
+.content {
   width: 75%;
+
+  @media (max-width: $size-mobile) {
+    width: 100%;
+  }
 }
 
 .sidebar {
   width: 22%;
+
+  @media (max-width: $size-mobile) {
+    width: 100%;
+    margin-bottom: res(50, mobile);
+  }
 }

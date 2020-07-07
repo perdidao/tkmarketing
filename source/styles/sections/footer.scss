@@ -5,28 +5,62 @@
   @include font-smoothing(on);
   position: relative;
 
-  &:before{
-    content: ' ';
+  @media (max-width: $size-notebook) {
+    padding: res(40, notebook) 0;
+  }
+
+  @media (max-width: $size-mobile) {
+    padding: res(40, mobile) 0 res(150, mobile);
+  }
+
+  &:before {
+    content: " ";
     display: block;
-    width:res(254);
-    height:res(184);
-    background:url(../images/footer-illustration.png) no-repeat center center;
+    width: res(254);
+    height: res(184);
+    background: url(../images/footer-illustration.png) no-repeat center center;
     background-size: contain;
     position: absolute;
-    left:res(-16);
+    z-index: 1;
+    left: res(-16);
     bottom: res(-10);
+
+    @media (max-width: $size-notebook) {
+      width: res(254, notebook);
+      height: res(184, notebook);
+      left: res(-16, notebook);
+      bottom: res(-10, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: res(254, mobile);
+      height: res(184, mobile);
+      left: res(-16, mobile);
+      bottom: res(-10, mobile);
+    }
   }
 
   &__container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+    }
   }
 
   &__inst {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin-bottom: res(50, mobile);
+    }
   }
 
   &__logo {
@@ -36,41 +70,115 @@
       display: block;
       max-width: res(80);
     }
+
+    @media (max-width: $size-notebook) {
+      margin-right: res(20, notebook);
+
+      img {
+        max-width: res(80, notebook);
+      }
+    }
+
+    @media (max-width: $size-mobile) {
+      margin-right: res(20, mobile);
+
+      img {
+        max-width: res(80, mobile);
+      }
+    }
   }
 
   &__contacts {
     max-width: res(275);
+
+    @media (max-width: $size-notebook) {
+      max-width: res(275, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      max-width: 100%;
+    }
   }
 
   &__text {
     font-size: res(14);
     line-height: 2.5;
+
+    @media (max-width: $size-notebook) {
+      font-size: res(14, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(14, mobile);
+      line-height: 1.8;
+    }
   }
 
   &__small {
     font-size: res(11);
+
+    @media (max-width: $size-notebook) {
+      font-size: res(11, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(11, mobile);
+    }
   }
 
   &__navs {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__nav {
     margin-right: res(80);
+
+    @media (max-width: $size-notebook) {
+      margin-right: res(80, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin: 0 0 res(50, mobile);
+    }
   }
 
   &__title {
     font-size: res(20);
     font-family: $Klarna;
     margin-bottom: res(25);
+
+    @media (max-width: $size-notebook) {
+      font-size: res(20, notebook);
+      margin-bottom: res(25, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(20, mobile);
+      margin-bottom: res(15, mobile);
+    }
   }
 
   &__list {
     li {
       font-size: res(14);
       line-height: 2.5;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(14, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(14, mobile);
+      }
 
       a {
         transition: $default-transition;
@@ -87,12 +195,32 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 
+    @media (max-width: $size-mobile) {
+      justify-content: center;
+    }
+
     &-wrapper {
       max-width: res(320);
+
+      @media (max-width: $size-notebook) {
+        max-width: res(320, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        max-width: 100%;
+      }
     }
   }
 
   &__partner {
     margin: 0 res(20) res(10) 0;
+
+    @media (max-width: $size-notebook) {
+      margin: 0 res(20, notebook) res(10, notebook) 0;
+    }
+
+    @media (max-width: $size-mobile) {
+      margin: 0 res(20, mobile) res(10, mobile) 0;
+    }
   }
 }

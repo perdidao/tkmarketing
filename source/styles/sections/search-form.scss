@@ -7,6 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: stretch;
+
+    @media (max-width: $size-notebook) {
+      padding: 0 0 res(20, notebook);
+      margin-bottom: res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: 0 0 res(20, mobile);
+      margin-bottom: res(20, mobile);
+    }
   }
 
   &__input {
@@ -18,6 +28,18 @@
     color: $gray;
     border: 1px solid $lavender;
     flex-grow: 2;
+
+    @media (max-width: $size-notebook) {
+      height: res(32, notebook);
+      padding: 0 res(10, notebook);
+      font-size: res(16, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(40, mobile);
+      padding: 0 res(10, mobile);
+      font-size: res(16, mobile);
+    }
   }
 
   &__button {
@@ -35,6 +57,18 @@
     transition: $default-transition;
     cursor: pointer;
     @include font-smoothing(on);
+
+    @media (max-width: $size-notebook) {
+      height: res(32, notebook);
+      padding: 0 res(10, notebook);
+      font-size: res(14, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(40, mobile);
+      padding: 0 res(10, mobile);
+      font-size: res(14, mobile);
+    }
 
     &:hover {
       background-color: $blue;

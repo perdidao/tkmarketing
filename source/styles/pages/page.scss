@@ -6,6 +6,16 @@
     padding: res(80) 0 res(20);
     position: relative;
 
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(60, notebook);
+      padding: res(80, notebook) 0 res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      margin-bottom: res(60, mobile);
+      padding: res(50, mobile) 0 res(20, mobile);
+    }
+
     &__title {
       display: inline-block;
       color: $deepsea;
@@ -22,6 +32,24 @@
         position: absolute;
         bottom: res(-30);
         left: 0;
+      }
+
+      @media (max-width: $size-notebook) {
+        font-size: res(36, notebook);
+
+        &:after {
+          height: res(10, notebook);
+          bottom: res(-30, notebook);
+        }
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(36, mobile);
+
+        &:after {
+          height: res(10, mobile);
+          bottom: res(-30, mobile);
+        }
       }
     }
 

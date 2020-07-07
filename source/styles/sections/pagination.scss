@@ -5,6 +5,14 @@
   justify-content: center;
   margin-bottom: res(100);
 
+  @media (max-width: $size-notebook) {
+    margin-bottom: res(100, notebook);
+  }
+
+  @media (max-width: $size-mobile) {
+    margin-bottom: res(100, mobile);
+  }
+
   .page {
     &-numbers {
       display: block;
@@ -16,6 +24,20 @@
       line-height: res(30);
       transition: $default-transition;
       margin: 0 res(5);
+
+      @media (max-width: $size-notebook) {
+        width: res(30, notebook);
+        height: res(30, notebook);
+        line-height: res(30, notebook);
+        margin: 0 res(5, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        width: res(30, mobile);
+        height: res(30, mobile);
+        line-height: res(30, mobile);
+        margin: 0 res(5, mobile);
+      }
 
       &:hover {
         background-color: $blue;
@@ -30,6 +52,14 @@
         width: auto;
         padding: 0 res(10);
         background-color: $lavender;
+
+        @media (max-width: $size-notebook) {
+          padding: 0 res(10, notebook);
+        }
+
+        @media (max-width: $size-mobile) {
+          padding: 0 res(10, mobile);
+        }
 
         &:hover {
           background-color: $sky;
