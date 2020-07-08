@@ -9,5 +9,7 @@
 
   get_template_part('partials/home/recent');
 
+  get_template_part('partials/home/special');
+
   get_footer();
 ?>

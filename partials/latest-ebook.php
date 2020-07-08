@@ -25,5 +25,7 @@
   <?php
       endwhile;
     endif;
+
+    wp_reset_query();
   ?>
 </section>

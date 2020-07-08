@@ -1,0 +1,138 @@
+.special {
+  padding: res(40) 0 res(20);
+  background-color: $ghost;
+
+  @media (max-width: $size-notebook) {
+    padding: res(40, notebook) 0 res(20, notebook);
+  }
+
+  @media (max-width: $size-mobile) {
+    padding: res(60, mobile) 0 res(20, mobile);
+  }
+
+  &__title {
+    font-family: $Klarna;
+    font-size: res(30);
+    line-height: res(36);
+    font-weight: $bold;
+    color: $primary;
+    margin-bottom: res(20);
+
+    &--small {
+      display: block;
+      font-size: res(20);
+      line-height: res(24);
+      color: $gray;
+    }
+
+    @media (max-width: $size-notebook) {
+      font-size: res(30, notebook);
+      line-height: res(36, notebook);
+      margin-bottom: res(20, notebook);
+
+      &--small {
+        font-size: res(20, notebook);
+        line-height: res(24, notebook);
+      }
+    }
+
+    @media (max-width: $size-mobile) {
+      font-size: res(30, mobile);
+      line-height: res(36, mobile);
+      margin-bottom: res(20, mobile);
+
+      &--small {
+        font-size: res(20, mobile);
+        line-height: res(24, mobile);
+      }
+    }
+  }
+
+  &__posts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-post {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: res(20);
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(20, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: res(40, mobile);
+    }
+
+    &__image {
+      width: res(160);
+      margin-right: res(20);
+      flex-shrink: 0;
+
+      @media (max-width: $size-notebook) {
+        width: res(160, notebook);
+        margin-right: res(20, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        width: res(160, mobile);
+        margin-right: res(20, mobile);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      font-family: $Klarna;
+      font-size: res(16);
+      line-height: res(19);
+      font-weight: $bold;
+      color: $black;
+      margin-bottom: res(10);
+
+      @media (max-width: $size-notebook) {
+        font-size: res(16, notebook);
+        line-height: res(19, notebook);
+        margin-bottom: res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(16, mobile);
+        line-height: res(19, mobile);
+        margin-bottom: res(10, mobile);
+      }
+    }
+
+    &__excerpt {
+      p {
+        font-size: res(14);
+        line-height: res(19);
+
+        @media (max-width: $size-notebook) {
+          font-size: res(14, notebook);
+          line-height: res(19, notebook);
+        }
+
+        @media (max-width: $size-mobile) {
+          font-size: res(14, mobile);
+          line-height: res(19, mobile);
+        }
+      }
+    }
+  }
+}

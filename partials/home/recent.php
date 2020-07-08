@@ -11,7 +11,7 @@
       <?php
         query_posts([
           'post_type' => 'post',
-          'posts_per_page' => '4',
+          'posts_per_page' => get_field('recent-quantity'),
           'offset' => 1
         ]);
 
@@ -44,6 +44,8 @@
       <?php
           endwhile;
         endif;
+
+        wp_reset_query();
       ?>
 
     </ul>
