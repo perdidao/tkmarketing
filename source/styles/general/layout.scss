@@ -47,3 +47,14 @@ a {
     margin-bottom: res(50, mobile);
   }
 }
+
+.error-404 {
+  margin: 10vh 0;
+  line-height: 1.6;
+  font-size: 1.2em;
+
+  a {
+    color: $primary;
+    text-decoration: underline;
+  }
+}

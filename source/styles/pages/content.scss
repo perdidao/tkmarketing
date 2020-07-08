@@ -1,0 +1,150 @@
+.content {
+  &-description {
+    width: res(540);
+    margin-bottom: res(40);
+    font-size: res(18);
+
+    @media (max-width: $size-notebook) {
+      width: res(540, notebook);
+      margin-bottom: res(40, notebook);
+      font-size: res(18, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin-bottom: res(40, mobile);
+      font-size: res(18, mobile);
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: res(100);
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(100, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+      margin-bottom: res(100, mobile);
+    }
+  }
+
+  &-item {
+    width: 32%;
+    margin-bottom: res(40);
+    border: 1px solid $ghost;
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(40, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin-bottom: res(40, mobile);
+    }
+
+    &__image {
+      background-color: $ghost;
+      padding: res(20);
+      text-align: center;
+
+      @media (max-width: $size-notebook) {
+        padding: res(20, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        padding: res(20, mobile);
+      }
+
+      img {
+        display: inline-block;
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      font-family: $Klarna;
+      font-size: res(22);
+      line-height: res(32);
+      padding: res(20) res(20) res(10);
+      font-weight: $bold;
+      color: $black;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(22, notebook);
+        line-height: res(32, notebook);
+        padding: res(20, notebook) res(20, notebook) res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(22, mobile);
+        line-height: res(32, mobile);
+        padding: res(20, mobile) res(20, mobile) res(10, mobile);
+      }
+    }
+
+    &__excerpt {
+      font-size: res(18);
+      padding: 0 res(20) res(10);
+
+      p {
+        line-height: res(28);
+      }
+
+      @media (max-width: $size-notebook) {
+        font-size: res(18, notebook);
+        padding: 0 res(20, notebook) res(10, notebook);
+
+        p {
+          line-height: res(28, notebook);
+        }
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(18, mobile);
+        padding: 0 res(20, mobile) res(10, mobile);
+
+        p {
+          line-height: res(28, mobile);
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      padding: res(15) res(20);
+      background-color: $deepsea;
+      text-align: center;
+      font-size: res(18);
+      font-family: $Klarna;
+      font-weight: $bold;
+      text-transform: uppercase;
+      color: $white;
+      transition: $default-transition;
+
+      @media (max-width: $size-notebook) {
+        padding: res(15, notebook) res(20, notebook);
+        font-size: res(18, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        padding: res(15, mobile) res(20, mobile);
+        font-size: res(18, mobile);
+      }
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}
