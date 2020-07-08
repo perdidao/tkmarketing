@@ -7,5 +7,7 @@
 
   get_template_part('partials/home/highlight');
 
+  get_template_part('partials/home/recent');
+
   get_footer();
 ?>

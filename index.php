@@ -23,7 +23,7 @@
     <article class="posts__item">
 
       <figure class="posts__thumb">
-        <a href="<?php the_permalink(); ?>" title="Continuar lendo sobre <?php the_title(); ?>"><img src="<?php the_post_thumbnail_url('highlight'); ?>" alt="<?php the_title(); ?>"></a>
+        <a href="<?php the_permalink(); ?>" title="Continuar lendo sobre <?php the_title(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
       </figure>
 
       <div class="posts__info">

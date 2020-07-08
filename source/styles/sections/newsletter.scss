@@ -4,7 +4,6 @@
   margin-bottom: res(20);
   background: $beige url(../images/newsletter-background.png) no-repeat bottom
     right;
-  background-size: 60%;
 
   @media (max-width: $size-notebook) {
     padding: res(20, notebook);
@@ -45,6 +44,15 @@
     font-family: $Avenir;
     font-size: res(18);
     color: $black;
+    background-color: $beige;
+
+    &--name {
+      width: 60%;
+    }
+
+    &--email {
+      width: 75%;
+    }
 
     @media (max-width: $size-notebook) {
       height: res(40, notebook);

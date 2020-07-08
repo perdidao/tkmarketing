@@ -46,6 +46,8 @@
     <?php
         endwhile;
       endif;
+
+      wp_reset_query();
     ?>
 
     <ul class="highlight-social">

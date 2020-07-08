@@ -61,7 +61,7 @@
 
   // Diminui o tamanho dos resumos do post
   function tk_custom_excerpt_length($length){
-    return 30;
+    return 24;
   }
   add_filter('excerpt_length', 'tk_custom_excerpt_length');
 

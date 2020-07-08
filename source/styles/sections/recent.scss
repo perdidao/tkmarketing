@@ -1,0 +1,153 @@
+.recent {
+  &-wrapper {
+    padding: res(40) 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: $size-notebook) {
+      padding: res(40, notebook) 0;
+    }
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+      padding: res(40, mobile) 0;
+    }
+  }
+
+  &-posts {
+    width: 66%;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+    }
+
+    &__title {
+      font-family: $Klarna;
+      font-size: res(32);
+      font-weight: $bold;
+      color: $black;
+
+      display: flex;
+      align-items: center;
+      justify-content: stretch;
+      margin-bottom: res(20);
+
+      &:after {
+        content: " ";
+        display: block;
+        max-width: 100%;
+        height: res(5);
+        margin-left: res(20);
+        background-color: $lavender;
+        flex-grow: 2;
+      }
+
+      @media (max-width: $size-notebook) {
+        font-size: res(32, notebook);
+        margin-bottom: res(20, notebook);
+
+        &:after {
+          height: res(5, notebook);
+          margin-left: res(20, notebook);
+        }
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(32, mobile);
+        margin-bottom: res(20, mobile);
+
+        &:after {
+          height: res(5, mobile);
+          margin-left: res(20, mobile);
+        }
+      }
+    }
+
+    &__items {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-post {
+    width: 48.5%;
+    margin-bottom: res(40);
+
+    @media (max-width: $size-notebook) {
+      margin-bottom: res(40, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      margin-bottom: res(40, mobile);
+    }
+
+    &__image {
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    &__info {
+      padding: res(10);
+
+      @media (max-width: $size-notebook) {
+        padding: res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        padding: res(10, mobile);
+      }
+    }
+
+    &__title {
+      font-family: $Klarna;
+      font-size: res(18);
+      line-height: res(22);
+      margin-bottom: res(10);
+      color: $black;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(18, notebook);
+        line-height: res(22, notebook);
+        margin-bottom: res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(18, mobile);
+        line-height: res(22, mobile);
+        margin-bottom: res(10, mobile);
+      }
+    }
+
+    &__excerpt {
+      p {
+        font-size: res(18);
+        line-height: res(25);
+
+        @media (max-width: $size-notebook) {
+          font-size: res(16, notebook);
+          line-height: res(22, notebook);
+        }
+
+        @media (max-width: $size-mobile) {
+          font-size: res(16, mobile);
+          line-height: res(22, mobile);
+        }
+      }
+    }
+  }
+
+  &-aside {
+    width: 32%;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+    }
+  }
+}

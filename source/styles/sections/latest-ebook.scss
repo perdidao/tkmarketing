@@ -76,10 +76,12 @@
 
   &__download {
     display: block;
+    width: 50%;
     padding: res(10) res(30);
     font-family: $Klarna;
     font-weight: $bold;
     text-transform: uppercase;
+    text-align: center;
     @include font-smoothing(on);
     letter-spacing: 0.1em;
     background-color: $blue;

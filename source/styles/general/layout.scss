@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   line-height: 1.2;
+  @include font-smoothing(on);
 }
 
 body {
@@ -31,7 +32,7 @@ a {
 }
 
 .content {
-  width: 75%;
+  width: 68%;
 
   @media (max-width: $size-mobile) {
     width: 100%;
@@ -39,7 +40,7 @@ a {
 }
 
 .sidebar {
-  width: 22%;
+  width: 28%;
 
   @media (max-width: $size-mobile) {
     width: 100%;
