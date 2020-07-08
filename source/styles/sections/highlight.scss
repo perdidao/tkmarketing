@@ -1,0 +1,205 @@
+.highlight {
+  width: 100%;
+  padding: res(40) 0;
+  background-color: $ghost;
+
+  @media (max-width: $size-notebook) {
+    padding: res(40, notebook) 0;
+  }
+
+  @media (max-width: $size-mobile) {
+    padding: 0 0 res(40, mobile);
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @media (max-width: $size-mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-post {
+    width: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      flex-direction: column-reverse;
+      margin-bottom: res(40, mobile);
+    }
+
+    &__info {
+      max-width: res(360);
+
+      @media (max-width: $size-notebook) {
+        max-width: res(360, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      font-family: $Klarna;
+      font-size: res(34);
+      line-height: res(46);
+      margin-bottom: res(20);
+      color: $black;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(34, notebook);
+        line-height: res(46, notebook);
+        margin-bottom: res(20, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(26, mobile);
+        line-height: res(36, mobile);
+        margin-bottom: res(10, mobile);
+      }
+    }
+
+    &__excerpt {
+      max-width: res(240);
+      font-size: res(18);
+      line-height: res(25);
+
+      @media (max-width: $size-notebook) {
+        max-width: res(240, notebook);
+        font-size: res(18, notebook);
+        line-height: res(25, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        max-width: 100%;
+        font-size: res(18, mobile);
+        line-height: res(25, mobile);
+        margin-bottom: res(20, mobile);
+      }
+    }
+
+    &__read {
+      display: inline-block;
+      padding: res(15) res(30);
+      background-color: $primary;
+      text-transform: uppercase;
+      font-size: res(18);
+      font-weight: $bold;
+      color: $white;
+
+      position: absolute;
+      bottom: 0;
+      left: res(290);
+
+      transition: $default-transition;
+
+      &:hover {
+        background-color: $deepsea;
+      }
+
+      @media (max-width: $size-notebook) {
+        padding: res(15, notebook) res(30, notebook);
+        font-size: res(18, notebook);
+        left: res(290, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        position: static;
+        display: block;
+        text-align: center;
+        padding: res(15, mobile) res(30, mobile);
+        font-size: res(18, mobile);
+        left: res(290, mobile);
+      }
+    }
+
+    &__image {
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      @media (max-width: $size-mobile) {
+        margin-bottom: res(20, mobile);
+      }
+    }
+  }
+
+  &-social {
+    width: 15.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (max-width: $size-mobile) {
+      width: 100%;
+      flex-direction: row;
+    }
+
+    &__item {
+      width: 100%;
+
+      @media (max-width: $size-mobile) {
+        width: 33.33%;
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      height: res(100);
+      padding: res(15) res(10);
+      background: no-repeat res(10) center;
+      font-family: $Klarna;
+      font-size: res(18);
+      font-weight: $bold;
+      color: $white;
+      @include font-smoothing(on);
+      transition: $default-transition;
+
+      @media (max-width: $size-notebook) {
+        height: res(100, notebook);
+        padding: res(15, notebook) res(10, notebook);
+        background: no-repeat res(10, notebook) center;
+        font-size: res(18, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        height: res(100, mobile);
+        padding: res(15, mobile) res(10, mobile);
+        background: no-repeat res(10, mobile) center;
+        font-size: res(15, mobile);
+        word-wrap: break-word;
+        background-position: center center;
+      }
+
+      &--facebook {
+        background-color: $facebook;
+        background-image: url(../images/facebook-icon.png);
+      }
+
+      &--instagram {
+        background-color: $instagram;
+        background-image: url(../images/instagram-icon.png);
+      }
+
+      &--linkedin {
+        background-color: $linkedin;
+        background-image: url(../images/linkedin-icon.png);
+      }
+
+      &:hover {
+        background-color: $deepsea;
+      }
+    }
+  }
+}
