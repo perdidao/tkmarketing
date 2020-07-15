@@ -10,4 +10,9 @@ jQuery(function ($) {
     $('.menu').toggleClass('active');
   });
 
+  $('.menu-item-has-children').click((e) => {
+    $(this).toggleClass('active');
+    $(this).find('.sub-menu').slideToggle();
+  });
+
 });
