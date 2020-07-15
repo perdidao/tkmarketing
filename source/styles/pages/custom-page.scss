@@ -3,6 +3,14 @@
     padding: res(80) 0;
     background-color: $white;
 
+    @media (max-width: $size-notebook) {
+      padding: res(80, notebook) 0;
+    }
+
+    @media (max-width: $size-mobile) {
+      padding: res(40, mobile) 0;
+    }
+
     &:nth-child(2n) {
       background-color: $ghost;
     }
@@ -19,6 +27,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: $size-mobile) {
+          flex-direction: column;
+        }
       }
 
       &--small {
@@ -28,11 +40,20 @@
       &--medium {
         max-width: 1024px;
       }
+
+      @media (max-width: $size-mobile) {
+        max-width: 80%;
+      }
     }
 
     &__image {
       width: 45%;
       flex-shrink: 0;
+
+      @media (max-width: $size-mobile) {
+        width: 100%;
+        margin-bottom: res(20, mobile);
+      }
 
       img {
         display: block;
@@ -42,18 +63,38 @@
 
     &__info {
       width: 50%;
+
+      @media (max-width: $size-mobile) {
+        width: 100%;
+      }
     }
 
     &__title {
       font-family: $Klarna;
       font-size: res(28);
       margin-bottom: 0.3em;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(28, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(28, mobile);
+      }
     }
 
     &__subtitle {
       font-family: $Klarna;
       font-size: res(20);
       line-height: 1.4;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(20, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(20, mobile);
+      }
     }
 
     &__column {
@@ -62,15 +103,36 @@
       p {
         line-height: 1.6;
       }
+
+      @media (max-width: $size-mobile) {
+        width: 100%;
+        margin-bottom: res(20, mobile);
+      }
     }
 
     &__text {
       margin: res(20) 0 0;
 
+      @media (max-width: $size-notebook) {
+        margin: res(20, notebook) 0 0;
+      }
+
+      @media (max-width: $size-mobile) {
+        margin: res(20, mobile) 0 0;
+      }
+
       p {
         font-size: res(16);
         margin: 0 0 1em;
         line-height: 1.6;
+
+        @media (max-width: $size-notebook) {
+          font-size: res(16, notebook);
+        }
+
+        @media (max-width: $size-mobile) {
+          font-size: res(16, mobile);
+        }
       }
 
       ul {
@@ -82,6 +144,14 @@
           margin: 0 0 0.2em;
           line-height: 1.6;
           list-style-type: disc;
+
+          @media (max-width: $size-notebook) {
+            font-size: res(16, notebook);
+          }
+
+          @media (max-width: $size-mobile) {
+            font-size: res(16, mobile);
+          }
         }
       }
 
