@@ -1,0 +1,52 @@
+.wp-block {
+  &-group {
+    padding: 2em 0;
+
+    &__inner-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    &:nth-of-type(2n) {
+      background-color: $silver;
+    }
+
+    .wp-block-columns {
+      width: 100%;
+      background-color: transparent;
+      padding: 1em 0;
+    }
+  }
+
+  &-columns {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+
+  &-quote {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    background-color: $sky;
+    color: $white;
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 0.5em;
+      font-size: 1.2em;
+
+      strong {
+        color: $white;
+      }
+    }
+
+    cite {
+      font-size: 0.9em;
+      font-style: normal;
+    }
+  }
+}

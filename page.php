@@ -7,16 +7,20 @@
       the_post();
 ?>
 
-<section class="page-header">
-  <div class="container">
-    <h1 class="page-header__title">
-      <?php the_title(); ?>
-    </h1>
-  </div>
-</section>
+<main class="page">
 
-<main class="page__container container">
-  <?php the_content(); ?>
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">
+        <?php the_title(); ?>
+      </h1>
+    </div>
+  </section>
+
+  <section class="page__content">
+    <?php the_content(); ?>
+  </section>
+
 </main>
 <?php
     endwhile;

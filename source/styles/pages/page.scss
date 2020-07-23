@@ -5,6 +5,7 @@
     margin-bottom: res(60);
     padding: res(80) 0 res(20);
     position: relative;
+    text-align: center;
 
     @media (max-width: $size-notebook) {
       margin-bottom: res(60, notebook);
@@ -68,6 +69,72 @@
       background-repeat: no-repeat;
       background-position: center center;
       opacity: 0.1;
+    }
+  }
+
+  &__content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $Klarna;
+      margin: 0.6em 0 1.2em;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: $blue;
+    }
+
+    h3 {
+      font-size: 1.6em;
+      color: $deepsea;
+    }
+
+    h4 {
+      background-color: $sky;
+      color: $white;
+      font-size: 1.2em;
+      padding: 1em 1.5em;
+    }
+
+    p {
+      margin: 0 0 1em;
+      line-height: 1.8;
+      font-size: 1em;
+
+      strong {
+        font-size: 1.2em;
+        color: $sky;
+      }
+    }
+
+    li {
+      line-height: 1.8;
+
+      strong {
+        font-family: $Klarna;
+        color: $sky;
+      }
+    }
+
+    ul,
+    ol {
+      margin: 0 0 1em 1.5em;
+    }
+
+    ul {
+      li {
+        list-style: disc;
+      }
+    }
+
+    ol {
+      li {
+        list-style: decimal;
+      }
     }
   }
 }
