@@ -10,7 +10,27 @@
     }
 
     &:nth-of-type(2n) {
-      background-color: $silver;
+      background-color: $primary;
+      color: $white;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      strong {
+        color: $in-yellow;
+      }
+    }
+
+    &:nth-of-type(5n) {
+      background-color: $in-green;
+      color: $white;
+
+      strong {
+        color: $in-yellow;
+      }
     }
 
     .wp-block-columns {
@@ -31,8 +51,8 @@
     width: 100%;
     text-align: center;
     padding: 2em 0;
-    background-color: $sky;
-    color: $white;
+    background-color: $silver;
+    color: $gray;
 
     p {
       max-width: 800px;
@@ -40,7 +60,7 @@
       font-size: 1.2em;
 
       strong {
-        color: $white;
+        color: $gray;
       }
     }
 
