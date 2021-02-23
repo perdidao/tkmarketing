@@ -1,5 +1,6 @@
 .header {
-  border-bottom: 5px solid $ghost;
+  background-color: $blue;
+  padding: res(20) 0;
 
   @media (max-width: $size-mobile) {
     padding: res(20, mobile);
@@ -11,32 +12,35 @@
     justify-content: space-between;
   }
 
-  &__brand {
+  &__block {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 
-    @media (max-width: $size-mobile) {
-      width: 100%;
-      justify-content: space-between;
-      align-items: flex-end;
+    &--left {
+      justify-content: flex-start;
+    }
+
+    &--right {
+      justify-content: flex-end;
+
+      @media (max-width: $size-mobile) {
+        margin-right: res(70, mobile);
+      }
     }
   }
 
   &__logo {
     display: block;
-    height: res(80);
-    margin-right: res(30);
+    margin-right: res(100);
     transition: $default-transition;
 
     @media (max-width: $size-notebook) {
-      height: res(80, notebook);
-      margin-right: res(30, notebook);
+      margin-right: res(50, notebook);
     }
 
     @media (max-width: $size-mobile) {
-      height: res(60, mobile);
       margin-right: res(30, mobile);
+      height: res(60, mobile);
     }
 
     &:hover {
@@ -49,32 +53,64 @@
     }
   }
 
-  &__description {
-    max-width: res(170);
-    position: relative;
-    font-size: res(14);
-    line-height: 1.4;
+  &__link {
+    display: block;
+    font-size: res(20);
+    color: $white;
+    transition: $default-transition;
 
     @media (max-width: $size-notebook) {
-      max-width: res(170, notebook);
-      font-size: res(14, notebook);
+      font-size: res(20, notebook);
     }
 
     @media (max-width: $size-mobile) {
-      max-width: res(170, mobile);
-      margin-right: res(40, mobile);
-      font-size: res(14, mobile);
+      font-size: res(20, mobile);
+    }
+
+    &:hover {
+      color: $red;
+    }
+
+    &:first-child {
+      margin-right: res(10);
+
+      @media (max-width: $size-notebook) {
+        margin-right: res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        margin-right: res(10, mobile);
+      }
+    }
+
+    &--lens {
+      font-size: res(16);
+
+      @media (max-width: $size-notebook) {
+        font-size: res(16, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(16, mobile);
+      }
     }
   }
 
-  &__highlight {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    color: $primary;
-    font-family: $Klarna;
-    font-weight: $bold;
-    transform: rotate(-5deg);
+  &__spacer {
+    width: 2px;
+    height: res(20);
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 res(15);
+
+    @media (max-width: $size-notebook) {
+      height: res(20, notebook);
+      margin: 0 res(15, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      height: res(20, mobile);
+      margin: 0 res(15, mobile);
+    }
   }
 
   &__toggle {
@@ -84,7 +120,7 @@
     background-color: $primary;
     position: fixed;
     z-index: 11;
-    top: 2vh;
+    top: 4vh;
     right: 2vh;
 
     &:before,

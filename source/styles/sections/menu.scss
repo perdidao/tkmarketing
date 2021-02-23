@@ -1,7 +1,7 @@
 .header {
   .menu {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: flex-start;
 
     @media (max-width: $size-mobile) {
@@ -15,7 +15,7 @@
       z-index: 10;
       width: 100%;
       height: 100%;
-      background-color: $white;
+      background-color: $blue;
 
       &.active {
         display: flex;
@@ -26,96 +26,39 @@
       position: relative;
       cursor: pointer;
 
-      &-has-children {
-        > a {
-          &:after {
-            content: " ";
-            display: block;
-            width: 0;
-            height: 0;
-            border: 6px solid $white;
-            margin-left: res(10);
-            border-top-color: $gray;
-            transform: translateY(3px);
-
-            @media (max-width: $size-mobile) {
-              display: none;
-            }
-          }
-        }
-      }
-
       a {
-        display: block;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: res(120);
-        padding: res(10) res(20);
-        border-bottom: 5px solid transparent;
+        padding: res(10) res(12);
+        color: $white;
         font-family: $Klarna;
-        font-weight: $light;
-        font-size: res(18);
+        font-weight: $bold;
+        font-size: res(16);
+        text-transform: uppercase;
         transition: $default-transition;
 
         @media (max-width: $size-notebook) {
           height: res(120, notebook);
           padding: res(10, notebook) res(20, notebook);
-          font-size: res(18, notebook);
+          font-size: res(16, notebook);
         }
 
         @media (max-width: $size-mobile) {
           height: auto;
           padding: res(15, mobile) res(20, mobile);
-          font-size: res(18, mobile);
+          font-size: res(16, mobile);
         }
 
         &:hover {
-          color: $primary;
-          border-bottom: 5px solid $primary;
+          color: $red;
         }
       }
 
-      &-953 {
-        position: relative;
-
-        &:before {
-          content: " ";
-          display: block;
-          width: res(30);
-          height: res(30);
-          background: url(../images/ico-rocket.svg) no-repeat center center;
-          position: absolute;
-          top: 40%;
-          right: res(15);
-          z-index: 1;
-
-          @media (max-width: $size-notebook) {
-            width: res(30, notebook);
-            height: res(30, notebook);
-            right: res(15, notebook);
-          }
-
-          @media (max-width: $size-mobile) {
-            width: res(30, mobile);
-            height: res(30, mobile);
-            right: res(15, mobile);
-          }
-        }
-
-        a {
-          color: $black;
-          font-weight: $bold;
-          position: relative;
-          z-index: 2;
-        }
-      }
       &.current-menu-ancestor,
       &.current-menu-item {
         > a {
-          font-weight: $bold;
-          color: $primary;
-          border-bottom: 5px solid $primary;
+          color: $red;
         }
       }
     }
@@ -128,9 +71,8 @@
   top: 100%;
   left: 0;
   min-width: 240px;
-  background-color: $white;
+  background-color: $blue;
   border-radius: 0 0 res(10) res(10);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: none;
 

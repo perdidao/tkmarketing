@@ -26,43 +26,42 @@
 
     <div class="container header__container">
 
-      <div class="header__brand">
-
-        <?php
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $image = wp_get_attachment_image_src($custom_logo_id, 'full');
-          $source = $image[0];
-        ?>
+      <section class="header__block header__block--left">
 
         <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>" class="header__logo">
-          <img src="<?php echo $source; ?>" alt="<?php bloginfo('title'); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" alt="<?php bloginfo('title'); ?>">
         </a>
 
-        <p class="header__description">
+        <ul class="menu">
           <?php
-            $full = explode(' ', get_bloginfo('description'));
-            $lastWord = array_pop($full);
-            $string = preg_replace('/\W\w+\s*(\W*)$/', '$1', get_bloginfo('description'));
 
-            echo $string . ' <strong class="header__highlight">' . $lastWord . '</strong>';
+            wp_nav_menu([
+              'theme_location' => 'main_nav',
+              'container' => false,
+              'echo' => true,
+              'items_wrap' => '%3$s',
+              'depth' => 0,
+            ]);
+
           ?>
-        </p>
+        </ul>
 
-      </div>
+      </section>
 
-      <ul class="menu">
+      <div class="header__block header__block--right">
+        <?php if (get_theme_mod('facebook_link')): ?>
+        <a href="<?php echo get_theme_mod('facebook_link'); ?>" target="_blank" title="Curta nossa página no Facebook" class="header__link"><i class="fab fa-facebook-square"></i></a>
         <?php
-
-          wp_nav_menu([
-            'theme_location' => 'main_nav',
-            'container' => false,
-            'echo' => true,
-            'items_wrap' => '%3$s',
-            'depth' => 0,
-          ]);
-
+          endif;
+          if (get_theme_mod('instagram_link')):
         ?>
-      </ul>
+        <a href="<?php echo get_theme_mod('instagram_link'); ?>" target="_blank" title="Siga-nos no Instagram" class="header__link"><i class="fab fa-instagram"></i></a>
+        <?php
+          endif;
+        ?>
+        <div class="header__spacer"></div>
+        <a href="<?php bloginfo('url') ?>/buscar" title="Buscar artigos" class="header__link header__link--lens"><i class="fas fa-search"></i></a>
+      </div>
 
       <a href="javascript:;" title="" class="header__toggle"></a>
 
