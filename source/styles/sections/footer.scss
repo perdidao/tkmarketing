@@ -1,5 +1,5 @@
 .footer {
-  background-color: $deepsea;
+  background-color: $blue;
   color: $ghost;
   padding: res(40) 0;
   @include font-smoothing(on);
@@ -123,6 +123,42 @@
 
     @media (max-width: $size-mobile) {
       font-size: res(11, mobile);
+    }
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: res(10);
+
+    @media (max-width: $size-notebook) {
+      margin-top: res(10, notebook);
+    }
+
+    @media (max-width: $size-mobile) {
+      margin-top: res(10, mobile);
+    }
+
+    &__link {
+      display: block;
+      font-size: res(30);
+      margin-right: res(10);
+      transition: $default-transition;
+
+      @media (max-width: $size-notebook) {
+        font-size: res(30, notebook);
+        margin-right: res(10, notebook);
+      }
+
+      @media (max-width: $size-mobile) {
+        font-size: res(30, mobile);
+        margin-right: res(10, mobile);
+      }
+
+      &:hover {
+        color: $sky;
+      }
     }
   }
 

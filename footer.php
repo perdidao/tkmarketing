@@ -24,6 +24,18 @@
               <?php echo get_theme_mod('whats'); ?> <span class="footer__small">whatsapp</span>
             </p>
             <?php endif; ?>
+            <nav class="footer-social">
+            <?php if (get_theme_mod('facebook_link')): ?>
+              <a href="<?php echo get_theme_mod('facebook_link'); ?>" target="_blank" title="Curta nossa página no Facebook" class="footer-social__link"><i class="fab fa-facebook-square"></i></a>
+            <?php
+              endif;
+              if (get_theme_mod('instagram_link')):
+            ?>
+              <a href="<?php echo get_theme_mod('instagram_link'); ?>" target="_blank" title="Siga-nos no Instagram" class="footer-social__link"><i class="fab fa-instagram"></i></a>
+            <?php
+              endif;
+            ?>
+            </nav>
           </div>
         </div>
         <div class="footer__navs">
