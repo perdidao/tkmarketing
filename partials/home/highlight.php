@@ -14,6 +14,12 @@
 
     <article class="highlight-post">
 
+      <figure class="highlight-post__image">
+        <a href="<?php the_permalink(); ?>" title="Continuar lendo sobre <?php the_title(); ?>">
+          <img src="<?php the_post_thumbnail_url('highlight') ?>" alt="Imagem relacionada ao <?php the_title(); ?>">
+        </a>
+      </figure>
+
       <div class="highlight-post__info">
 
         <h2 class="highlight-post__title">
@@ -35,12 +41,6 @@
 
       </div>
 
-      <figure class="highlight-post__image">
-        <a href="<?php the_permalink(); ?>" title="Continuar lendo sobre <?php the_title(); ?>">
-          <img src="<?php the_post_thumbnail_url('highlight') ?>" alt="Imagem relacionada ao <?php the_title(); ?>">
-        </a>
-      </figure>
-
     </article>
 
     <?php
@@ -49,30 +49,6 @@
 
       wp_reset_query();
     ?>
-
-    <ul class="highlight-social">
-
-      <?php if (get_theme_mod('facebook_link')) : ?>
-      <li class="highlight-social__item">
-        <a href="<?php echo get_theme_mod('facebook_link'); ?>" class="highlight-social__link highlight-social__link--facebook">
-          /tkmarketing
-        </a>
-      </li>
-      <?php endif; ?>
-      <?php if (get_theme_mod('instagram_link')) : ?>
-      <li class="highlight-social__item">
-        <a href="<?php echo get_theme_mod('instagram_link'); ?>" class="highlight-social__link highlight-social__link--instagram">
-          @tkmarketingdigital
-        </a>
-      </li>
-      <?php endif; ?>
-      <?php if (get_theme_mod('linkedin_link')) : ?>
-      <li class="highlight-social__item">
-        <a href="<?php echo get_theme_mod('linkedin_link'); ?>" class="highlight-social__link highlight-social__link--linkedin">
-          /tkmarketing
-        </a>
-      </li>
-      <?php endif; ?>
 
     </ul>
 

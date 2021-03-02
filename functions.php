@@ -5,7 +5,7 @@
   add_theme_support('post-thumbnails');
 
   // Tamanhos de imagens personalizados
-	add_image_size('highlight', 780, 340, true);
+	add_image_size('highlight', 600, 500, true);
 	add_image_size('large_thumb', 460, 230, true);
 	add_image_size('small_thumb', 160, 160, true);
 
